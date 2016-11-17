@@ -47,10 +47,31 @@ main:
 
 
 	@GPIO para lectura puerto 24 (temperatura)
-	mov r0,#21
+	mov r0,#24
 	mov r1,#0
 	bl SetGpioFunction
 
+
+	@GPIO para escritura puerto 23 (Iluminacion)
+	mov r0,#23
+	mov r1,#1
+	bl SetGpioFunction
+
+	@GPIO para escritura puerto 22 (alimentacion)
+	mov r0,#22
+	mov r1,#1
+	bl SetGpioFunction
+
+	@GPIO para escritura puerto 18 (calentador)
+	mov r0,#18
+	mov r1,#1
+	bl SetGpioFunction
+
+
+	@GPIO para lectura puerto 17 (tiempo)
+	mov r0,#17
+	mov r1,#0
+	bl SetGpioFunction
 
 	/*--------------------------------
 	 mprimrir primera pantalla
@@ -113,8 +134,30 @@ automatizacion:
 	bl revisarTemperatura
 	cmp r0,#1
 	bleq encenderTemperatura
+	bleq encederCalentador
 	cmp r0,#0
 	bleq apagarTemperatura
+	bleq apagarCalentador
+
+	bl keyEncenderIluminacion
+	cmp r0,#1
+	bleq encenderIluminacion
+	
+	bl keyApagarIluminacion
+	cmp r0,#1
+	bleq apagarIluminacion 
+
+	bl keyAlimentacion
+	cmp r0,#1
+	bleq encenderAlimentacion
+
+
+	bl revisarTiempo
+	cmp r0,#1
+	bleq encenderAlimentacion
+	
+
+
 
 
 
