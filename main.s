@@ -46,6 +46,12 @@ main:
 	bl SetGpioFunction
 
 
+	@GPIO para lectura puerto 24 (temperatura)
+	mov r0,#21
+	mov r1,#0
+	bl SetGpioFunction
+
+
 	/*--------------------------------
 	 mprimrir primera pantalla
 	 --------------------------------*/
@@ -103,6 +109,16 @@ confirmarNumero:
 
 	b confirmarNumero
 
+automatizacion:
+	bl revisarTemperatura
+	cmp r0,#1
+	bleq encenderTemperatura
+	cmp r0,#0
+	bleq apagarTemperatura
+
+
+
+
 
 
 
@@ -116,5 +132,8 @@ formato:
 	.asciz "%d"
 cantidadPeces:
 	.word 0
+.global pantalla
+pantalla:
+		.word 0
 
  .end
