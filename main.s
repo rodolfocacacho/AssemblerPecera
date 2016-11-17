@@ -5,23 +5,23 @@ main:
 	@utilizando la biblioteca GPIO (gpio0.s)
 	bl GetGpioAddress @solo se llama una vez
 		
-	@GPIO para escritura puerto 31
-	mov r0,#31
+	@GPIO para escritura puerto 6
+	mov r0,#6
 	mov r1,#1
 	bl SetGpioFunction
 
-	@GPIO para escritura puerto 33
-	mov r0,#33
+	@GPIO para escritura puerto 13
+	mov r0,#13
 	mov r1,#1
 	bl SetGpioFunction
 
-	@GPIO para escritura puerto 35
-	mov r0,#35
+	@GPIO para escritura puerto 19
+	mov r0,#19
 	mov r1,#1
 	bl SetGpioFunction
 
-	@GPIO para escritura puerto 37
-	mov r0,#37
+	@GPIO para escritura puerto 26
+	mov r0,#26
 	mov r1,#1
 	bl SetGpioFunction
 

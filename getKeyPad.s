@@ -4,23 +4,23 @@ getKeyPad:
 push {lr}
 loop:
 
-@Apagar GPIO 37
-	mov r0,#31
+@Apagar GPIO 26
+	mov r0,#26
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 33
-	mov r0,#33
+@Apagar GPIO 13
+	mov r0,#13
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 35
+@Apagar GPIO 19
 	mov r0,#35
 	mov r1,#0
 	bl SetGpio
 
-@encender GPIO 31
-	mov r0,#31
+@encender GPIO 6
+	mov r0,#6
 	mov r1,#1
 	bl SetGpio
 
@@ -83,23 +83,23 @@ ldr r6, =myloc
 /*fila 2*/
 
 
-@Apagar GPIO 37
-	mov r0,#31
+@Apagar GPIO 26
+	mov r0,#26
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 33
-	mov r0,#33
+@Apagar GPIO 13
+	mov r0,#13
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 31
-	mov r0,#35
+@Apagar GPIO 6
+	mov r0,#6
 	mov r1,#0
 	bl SetGpio
 
-@encender GPIO 35
-	mov r0,#31
+@encender GPIO 19
+	mov r0,#19
 	mov r1,#1
 	bl SetGpio
 
@@ -158,25 +158,25 @@ ldr r6, =myloc
 	movne r0,#11
 	popne {pc}
 
-fila/*3*/
+/*fila 3*/
 
-@Apagar GPIO 37
-	mov r0,#31
+@Apagar GPIO 26
+	mov r0,#26
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 31
-	mov r0,#33
+@Apagar GPIO 6
+	mov r0,#6
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 35
-	mov r0,#35
+@Apagar GPIO 19
+	mov r0,#19
 	mov r1,#0
 	bl SetGpio
 
-@encender GPIO 33
-	mov r0,#31
+@encender GPIO 13
+	mov r0,#13
 	mov r1,#1
 	bl SetGpio
 
@@ -239,23 +239,23 @@ ldr r6, =myloc
 	b loop
 
 /*fila 4*/
-Apagar GPIO 31
-	mov r0,#31
+@Apagar GPIO 6
+	mov r0,#6
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 33
-	mov r0,#33
+@Apagar GPIO 13
+	mov r0,#13
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 35
-	mov r0,#35
+@Apagar GPIO 19
+	mov r0,#19
 	mov r1,#0
 	bl SetGpio
 
-@encender GPIO 37
-	mov r0,#31
+@encender GPIO 26
+	mov r0,#26
 	mov r1,#1
 	bl SetGpio
 
@@ -320,23 +320,23 @@ ldr r6, =myloc
 keyEncenderIluminacion:
 		push {lr}
 
-	Apagar GPIO 31
-	mov r0,#31
+	@Apagar GPIO 6
+	mov r0,#6
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 33
-	mov r0,#33
+@Apagar GPIO 13
+	mov r0,#13
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 35
-	mov r0,#35
+@Apagar GPIO 19
+	mov r0,#19
 	mov r1,#0
 	bl SetGpio
 
-@encender GPIO 37
-	mov r0,#31
+@encender GPIO 26
+	mov r0,#26
 	mov r1,#1
 	bl SetGpio
 
@@ -360,23 +360,23 @@ keyEncenderIluminacion:
 keyApagarIluminacion:
 push {lr}
 
-Apagar GPIO 31
-	mov r0,#31
+@Apagar GPIO 6
+	mov r0,#6
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 33
-	mov r0,#33
+@Apagar GPIO 13
+	mov r0,#13
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 35
-	mov r0,#35
+@Apagar GPIO 19
+	mov r0,#19
 	mov r1,#0
 	bl SetGpio
 
-@encender GPIO 37
-	mov r0,#31
+@encender GPIO 26
+	mov r0,#26
 	mov r1,#1
 	bl SetGpio
 
@@ -399,25 +399,25 @@ ldr r6, =myloc
 pop {pc}
 
 .global keyAlimentacion
-keyAlimentacion
+keyAlimentacion:
 push {lr}
-pagar GPIO 31
-	mov r0,#31
+@Apagar GPIO 6
+	mov r0,#6
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 33
-	mov r0,#33
+@Apagar GPIO 13
+	mov r0,#13
 	mov r1,#0
 	bl SetGpio
 
-@Apagar GPIO 35
-	mov r0,#35
+@Apagar GPIO 19
+	mov r0,#19
 	mov r1,#0
 	bl SetGpio
 
-@encender GPIO 37
-	mov r0,#31
+@encender GPIO 26
+	mov r0,#26
 	mov r1,#1
 	bl SetGpio
 @14
