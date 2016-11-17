@@ -1,4 +1,4 @@
-.global temperatura
+.global revisartemperatura
 revisartemperatura:
 push {lr}
 
@@ -15,7 +15,7 @@ push {lr}
 	movne r0,#1
 	pop {pc}
 .global encenderTemperatura
-encenderTemperatrua:
+encenderTemperatura:
 		push {lr}
 
 		ldr r1,=pantalla
@@ -30,7 +30,7 @@ encenderTemperatrua:
 		pop {pc}
 
 .global apagarTemperatura
-apagarTemperatrua:
+apagarTemperatura:
 		push {lr}
 
 		ldr r1,=pantalla
@@ -46,5 +46,3 @@ apagarTemperatrua:
 		addgt r1,#4
 		ldrgt r0,=pantalla
 		strgt r1,[r0]
-
-
