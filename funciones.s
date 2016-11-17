@@ -1,5 +1,5 @@
 .global temperatura
-temperatura:
+revisartemperatura:
 push {lr}
 
 	ldr r6, =myloc
@@ -14,7 +14,7 @@ push {lr}
 	mov r0,#0
 	movne r0,#1
 	pop {pc}
-.global encenderTemperatrua
+.global encenderTemperatura
 encenderTemperatrua:
 		push {lr}
 
@@ -29,7 +29,7 @@ encenderTemperatrua:
 		strlt r1,[r0]
 		pop {pc}
 
-.global apagarTemperatrua
+.global apagarTemperatura
 apagarTemperatrua:
 		push {lr}
 
